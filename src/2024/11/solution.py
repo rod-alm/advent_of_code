@@ -10,12 +10,12 @@ def load_data() -> str:
     return data
 
 
-def parse_data(data: str):
+def parse_data(data: str) -> list[int]:
     return [int(num) for num in data.strip().split(" ")]
 
 
 @cache
-def count_stones(stone: int, n: int):
+def count_stones(stone: int, n: int) -> int:
     if n <= 0:
         return 1
 
